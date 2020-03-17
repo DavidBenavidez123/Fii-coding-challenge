@@ -10,30 +10,26 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "HelloWorld",
   props: {
     list: Array
+  },
+  mounted() {
+    this.$store.dispatch("loadList");
+  },
+  computed: {
+    ...mapState([
+      "list"
+      ])
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -47,7 +43,7 @@ a {
   height: 193px;
   object-fit: contain;
   background-color: #fdfbf2;
-  transition: box-shadow .5s;
+  transition: box-shadow 0.5s;
 }
 .ui.image:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

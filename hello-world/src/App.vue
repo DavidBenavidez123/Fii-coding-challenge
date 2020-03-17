@@ -8,28 +8,11 @@
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-import axios from "axios";
 export default {
   name: "App",
   components: {
     HelloWorld
   },
-  mounted() {
-    axios
-      .get("https://picsum.photos/v2/list")
-      .then(res => {
-        this.list = res.data;
-        console.log("List", this.list);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  },
-  data() {
-    return {
-      list: []
-    };
-  }
 };
 </script>
 
