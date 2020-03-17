@@ -1,12 +1,9 @@
 <template lang="html">
-  <div>
-    <sui-card>
-      <a href="#"><sui-image src="static/images/avatar/large/steve.jpg"/></a>
+  <div class="list">
+    <sui-card class='list-card' v-for="list in list" :key="list.id">
+      <a v-bind:href="list.download_url"><sui-image v-bind:src="list.download_url"/></a>
       <sui-card-content>
-        <sui-card-header><a>Steve Jobes</a></sui-card-header>
-        <sui-card-meta>
-          <a>Last Seen 2 days ago</a>
-        </sui-card-meta>
+        <sui-card-header><a v-bind:href="list.url" >{{list.author}}</a></sui-card-header>
       </sui-card-content>
     </sui-card>
   </div>
@@ -16,7 +13,7 @@
 export default {
   name: "HelloWorld",
   props: {
-    msg: String
+    list: Array
   }
 };
 </script>
@@ -36,5 +33,18 @@ li {
 }
 a {
   color: #42b983;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.list-card.ui.card {
+  margin: 20px;
+}
+.ui.image {
+  width: 290px;
+  height: 193px;
+  object-fit: contain;
 }
 </style>

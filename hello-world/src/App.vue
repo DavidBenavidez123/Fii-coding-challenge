@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div>
+      <HelloWorld :list="list" />
+    </div>
   </div>
 </template>
 
@@ -18,7 +19,7 @@ export default {
       .get("https://picsum.photos/v2/list")
       .then(res => {
         this.list = res.data;
-        console.log('List',this.list);
+        console.log("List", this.list);
       })
       .catch(err => {
         console.log(err);
