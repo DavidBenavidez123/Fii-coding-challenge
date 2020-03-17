@@ -15,7 +15,6 @@ export default new vuex.Store({
             commit('SET_LIST_LOADING', true)
             axios
                 .get("https://picsum.photos/v2/list")
-
                 .then(res => {
                     commit('SET_LIST', res.data)
                     commit('SET_LIST_LOADING', false)
