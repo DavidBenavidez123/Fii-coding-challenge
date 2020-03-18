@@ -1,17 +1,17 @@
 <template>
   <div class="about">
-    <div>About</div>
+    <div class="about-content">About</div>
   </div>
 </template>
 <script>
 export default {
-  name: "About",
+  name: "About"
 };
 </script>
 
 <style scoped>
-.about{
-    height: 80vh;
+.about {
+  margin-top: 100px;
+  height: 70vh;
 }
-
 </style>

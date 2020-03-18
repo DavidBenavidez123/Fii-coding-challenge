@@ -8,7 +8,8 @@ export default new vuex.Store({
     state: {
         list: [],
         loading: false,
-        error: ''
+        error: '',
+        imageGallery: [],
     },
     actions: {
         loadList({ commit }) {
@@ -27,12 +28,23 @@ export default new vuex.Store({
     mutations: {
         SET_LIST_LOADING(state, payload) {
             state.loading = payload
+
         },
         SET_LIST(state, payload) {
             state.list = payload
+
         },
         SET_LIST_ERROR(state, payload) {
             state.error = payload
+        }
+    },
+    getters: {
+        imageGallery: state => {
+            for (let i = 0; i < state.list.length; i++) {
+                state.imageGallery.push(state.list[i].download_url);
+            }
+            return state.imageGallery
+
         }
     }
 })
