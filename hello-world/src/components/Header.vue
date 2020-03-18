@@ -65,6 +65,7 @@ export default {
   font-size: 17px;
   line-height: 32px;
 }
+
 .register {
   height: 36px;
   width: 100px;

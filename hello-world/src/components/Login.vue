@@ -21,6 +21,7 @@
         <router-link to="/Register">
           <p>Signup</p>
         </router-link>
+        <mdb-icon icon="map-marker-alt" />
       </div>
     </div>
   </div>
