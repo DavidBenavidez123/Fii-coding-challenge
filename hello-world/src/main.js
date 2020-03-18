@@ -6,6 +6,8 @@ import store from './components/store'
 import VueRouter from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import About from './components/About.vue'
+import Login from './components/Login.vue'
+import Register from './components/Register.vue'
 
 Vue.config.productionTip = false
 Vue.use(SuiVue);
@@ -18,6 +20,12 @@ const router = new VueRouter({
     },
     {
       path: '/About', component: About
+    },
+    {
+      path: '/Login', component: Login
+    },
+    {
+      path: '/Register', component: Register
     },
   ],
   mode: 'history'

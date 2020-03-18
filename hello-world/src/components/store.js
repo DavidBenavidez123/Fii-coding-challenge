@@ -44,7 +44,6 @@ export default new vuex.Store({
                 state.imageGallery.push(state.list[i].download_url);
             }
             return state.imageGallery
-
         }
     }
 })
