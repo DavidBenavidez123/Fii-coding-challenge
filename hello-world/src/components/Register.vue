@@ -21,7 +21,6 @@
         </sui-form-field>
       </sui-form>
       <p class="register-button">Register</p>
-
       <div class="login">
         <p>Have an account?</p>
         <router-link to="/Login">
@@ -83,7 +82,7 @@ label {
 @media only screen and (max-width: 600px) {
   .register-content {
     width: 300px;
-    height: 500px;
+    height: 600px;
   }
 }
 
