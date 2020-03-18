@@ -1,18 +1,21 @@
 <template>
   <div id="app">
     <div>
-      <HelloWorld />
+      <Header />
+      <router-view></router-view>
+      <Footer />
     </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 export default {
   name: "App",
   components: {
-    HelloWorld
+    Footer,
+    Header
   }
 };
 </script>
@@ -25,5 +28,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 </style>
