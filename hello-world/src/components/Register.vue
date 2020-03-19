@@ -79,6 +79,7 @@ label {
   justify-content: center;
 }
 
+
 @media only screen and (max-width: 600px) {
   .register-content {
     width: 300px;
@@ -86,12 +87,15 @@ label {
   }
 }
 
-@media only screen and (max-width: 320px) {
-  .register-button {
-    margin-top: 60px;
-  }
+@media only screen and (max-width: 400px) {
   .register {
-    margin-bottom: 80px;
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .register {
+    margin-bottom: 190px;
   }
 }
 </style>
